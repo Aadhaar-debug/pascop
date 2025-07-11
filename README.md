@@ -1,4 +1,3 @@
-# Patent reg. no - 202211069581 Dec 2 - 2022
 # Pascop
 ## Protecting one user at a time
 
