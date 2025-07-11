@@ -65,7 +65,7 @@ function theBankBlocking()
 }
 
 function ShowNotificationForBankingSites() {
-	// alert("⚠️ Attention ! Kavach wants to send you a message");
+	// alert("⚠️ Attention ! Pascop wants to send you a message");
 	
 	  
 	
@@ -171,7 +171,7 @@ function theSocialBlocking()
 
 
 function ShowNotificationForSocialMediaSites() {
-	// alert("⚠️ Attention ! Kavach wants to send you a message");
+	// alert("⚠️ Attention ! Pascop wants to send you a message");
 	const notification4 = new Notification("⚠️ Internet Security Warning !!!", {
 	   body: "The site may carry potentially malicious sources . Click here to secure yourself.",
 	   icon: "img0001-modified-modified.png"
@@ -251,7 +251,7 @@ function theServiceBlocking()
 
 
 function ShowNotificationForSreviceSites() {
-	// alert("⚠️ Attention ! Kavach wants to send you a message");
+	// alert("⚠️ Attention ! Pascop wants to send you a message");
 	
 	  
 	

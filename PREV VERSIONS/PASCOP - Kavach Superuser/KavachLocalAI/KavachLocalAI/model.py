@@ -33,7 +33,7 @@ dtype_dict = {
 }
 
 
-df = pd.read_csv(r'C:\Users\acer\Desktop\CYBER HYGIENE TOOL V10 Superuser\KavachLocalAI\urls.csv')
+df = pd.read_csv(r'C:\Users\acer\Desktop\Pascop V10 Superuser\Pascop\urls.csv')
 print(df)
 
 
@@ -228,7 +228,7 @@ rf = RandomForestRegressor(max_depth=2, random_state=100)
 rf.fit(X_train, y_train)
 
 # Generate model file
-model_filename = r'C:\Users\acer\Desktop\CYBER HYGIENE TOOL V10 Superuser\KavachLocalAI\KavachLocalAI\random_forest_model.joblib'
+model_filename = r'C:\Users\acer\Desktop\Pascop V10 Superuser\Pascop\Pascop\random_forest_model.joblib'
 joblib.dump(rf, model_filename)
 
 print(f"Random Forest model saved at: {model_filename}")
@@ -239,7 +239,7 @@ linear_reg = LinearRegression()
 linear_reg.fit(X_train, y_train)
 
 # Generate model file for Linear Regression
-linear_model_filename = r'C:\Users\acer\Desktop\CYBER HYGIENE TOOL V10 Superuser\KavachLocalAI\KavachLocalAI\linear_regression_model.joblib'
+linear_model_filename = r'C:\Users\acer\Desktop\Pascop V10 Superuser\Pascop\Pascop\linear_regression_model.joblib'
 joblib.dump(linear_reg, linear_model_filename)
 
 print(f"Linear Regression model saved at: {linear_model_filename}")

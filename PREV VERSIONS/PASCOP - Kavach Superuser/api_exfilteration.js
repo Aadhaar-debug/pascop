@@ -33,7 +33,7 @@ app.post('/capture_data', async (req, res) => {
         const csvData = urls.map(url => `${url}\n`).join('');
 
         // Write the CSV data to a local file
-        fs.writeFileSync('C:\\Users\\acer\\Desktop\\STELLAR\\KavachLocalAI\\KavachLocalAI\\urls.csv', csvData);
+        fs.writeFileSync('C:\\Users\\acer\\Desktop\\STELLAR\\Pascop\\Pascop\\urls.csv', csvData);
 
 
         res.status(200).send('Data sent and saved as CSV successfully');

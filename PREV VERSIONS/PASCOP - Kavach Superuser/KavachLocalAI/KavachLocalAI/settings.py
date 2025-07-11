@@ -56,7 +56,7 @@ ROOT_URLCONF = 'KavachLocalAI.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR, r'C:\Users\acer\Desktop\CYBER HYGIENE TOOL V9 Superuser\KavachLocalAI\KavachLocalAI\templates'],
+        'DIRS': [BASE_DIR, r'C:\Users\acer\Desktop\Pascop V9 Superuser\Pascop\Pascop\templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

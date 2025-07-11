@@ -11,4 +11,4 @@ def display_output(request):
     # Call the function from model.py to generate output
     output_data = generate_output()  # Call the function to get output
 
-    return render(request, r'C:\Users\acer\Desktop\CYBER HYGIENE TOOL V10 Superuser\KavachLocalAI\KavachLocalAI\templates\index.html', {'output_data': output_data})
+    return render(request, r'C:\Users\acer\Desktop\Pascop V10 Superuser\Pascop\Pascop\templates\index.html', {'output_data': output_data})

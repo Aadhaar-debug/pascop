@@ -1,10 +1,10 @@
 # Patent reg. no - 202211069581 Dec 2 - 2022
-# CYBER HYGIENE TOOL (Kavach.ai)
+# Pascop
 ## Protecting one user at a time
 
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
-KAVACH IS A SMART ARTIFICIAL INTELLIGTH AGENT THAT RESTRICTS THE MALICIOUS USER ACTIVITY / BLACK HAT ACTIVITIESON THE NETWORK OR THE BROWSER.
+PASOP IS A SMART ARTIFICIAL INTELLIGENCE AGENT THAT RESTRICTS THE MALICIOUS USER ACTIVITY / BLACK HAT ACTIVITIES ON THE NETWORK OR THE BROWSER.
 
 - MADE IN PYTOHN , JAVASCRIPT , JQUERY FOR LOGICS
 - FRONT END MADE IN HTML , CSS , JAVASCRIPT AND BOOTSTRAP
@@ -19,7 +19,7 @@ Internet usage has become an integral part of our lives, and with it comes the r
 
 
 ## Proposed Solution
-To address the problem of the lack of cyber hygiene awareness among Indian internet users and the increasing risks associated with online activities, we have developed a comprehensive solution called KAVACH. KAVACH is an AI-based advisory tool that provides users with a one-stop solution to safeguard their online activities. It keeps track of all online activities and provides real-time alerts and suggestions to users, enabling them to make informed decisions about their online behavior.KAVACH uses federated learning models to improve its algorithms continuously. By utilizing deep neural networks, it identifies complex types of attacks and classifies them for the users, ensuring a safer online experience.Moreover, to ensure users' privacy and security, KAVACH uses a sandboxing agent that tests the product before deploying it onto users' devices. This approach enables us to detect and prevent malware attacks and prevent cybercriminals from accessing users' confidential information.KAVACH is designed to meet the needs of users of all skill levels, making it easy for anyone to use it. Our ultimate goal is to create a safe online environment for Indian internet users and prevent them from falling victim to cyber-attacks. With KAVACH, we believe we can make a significant impact in promoting cyber hygiene awareness among Indian internet users and keep them safe online.
+To address the problem of the lack of cyber hygiene awareness among Indian internet users and the increasing risks associated with online activities, we have developed a comprehensive solution called Pascop. Pascop is an AI-based advisory tool that provides users with a one-stop solution to safeguard their online activities. It keeps track of all online activities and provides real-time alerts and suggestions to users, enabling them to make informed decisions about their online behavior. Pascop uses federated learning models to improve its algorithms continuously. By utilizing deep neural networks, it identifies complex types of attacks and classifies them for the users, ensuring a safer online experience. Moreover, to ensure users' privacy and security, Pascop uses a sandboxing agent that tests the product before deploying it onto users' devices. This approach enables us to detect and prevent malware attacks and prevent cybercriminals from accessing users' confidential information. Pascop is designed to meet the needs of users of all skill levels, making it easy for anyone to use it. Our ultimate goal is to create a safe online environment for Indian internet users and prevent them from falling victim to cyber-attacks. With Pascop, we believe we can make a significant impact in promoting cyber hygiene awareness among Indian internet users and keep them safe online.
 
 
 ## Features
@@ -30,7 +30,7 @@ To address the problem of the lack of cyber hygiene awareness among Indian inter
 - A multidimensional framework protecting user against a multitude of online frauds and threats.
 - A framework providing access to genuine web sources foe downloading commonly-used software/content.
 
-Kavach is a man in the middle AI agent that operates between the request generated from the user and the response that we get back from the server . Kavach does that using 
+Pascop is a man in the middle AI agent that operates between the request generated from the user and the response that we get back from the server. Pascop does that using 
 a [Federated learning Model] that operates on [Artificial Intellignce][df1]
 
 > The overriding design goal for Markdown's
