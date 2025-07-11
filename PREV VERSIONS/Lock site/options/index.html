@@ -1,0 +1,766 @@
+<html ng-app="siteBlocker">
+
+<head>
+    <script src="jquery.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="bootstrap/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/checkbox.css">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+
+
+    <script type="text/javascript" src="js/angular.js"></script>
+    <script type="text/javascript" src="main-app.js?version=1059720131" id="sc-main-app"></script>
+    <script type="text/javascript" src="js/helper.js"></script>
+    <script type="text/javascript" src="js/toggle.directive.js"></script>
+    <script type="text/javascript" src="js/notify.js"></script>
+
+
+</head>
+
+<body ng-controller="AppController" ng-csp="no-unsafe-eval">
+  <div ng-if="data.loaded">
+    <div ng-if="!data.displayContent" class="text-center">
+        <h3>Enter password to access dashboard</h3>
+        <a href="/options/index.html">Enter password</a>
+        <button class="btn btn-primary" ng-click="showExportModal()" data-bs-toggle="modal" data-bs-target="#exportData">
+            <i class="fa fa-arrow-circle-down"></i> Export
+        </button>  
+    </div>
+    
+    <div ng-if="data.displayContent">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top custom-nav" ng-class="{ 'disabled-block' : !checkbox.enabled}">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item active">
+            
+                <a class="nav-link" aria-current="page" href="#" data-slide="1">
+                   <i class="fa fa-bars"></i> Dashboard
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" data-slide="2">
+                  <i class="fa fa-retweet"></i>  Redirect Option
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" data-slide="3">
+                    <i class="fa fa-clone"></i>  Block by Keys
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" data-slide="4">
+                    <i class="fa fa-clock-o"></i> White time
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="#" data-slide="5">
+                    <i class="fa fa-cogs"></i> &nbsp;Extra config
+                </a>
+              </li>
+              <li class="nav-item" ng-click="showSetPasswordModal()">
+                <a class="nav-link" href="#" data-slide="6">
+                    <i class="fa fa-unlock-alt"></i>
+                    {{ data.showPassInput ? 'Remove' : 'Set' }}
+                    password</a>
+            </li>
+            </ul>
+            
+          </div>         
+        </div>
+        <div class="contact-us">
+            <a href="https://form.mightyforms.com/share/6cfdc322-34f2-4625-bd31-667642103878" target="_blank" class="btn" title="Contact us">
+                <i class="fa fa-envelope"></i>
+            </a>
+          </div>
+      </nav>
+    
+    
+    
+    <div class="fixed-bottom fixed-custom">    
+        <label for="workStatus">Work Status</label>
+        <toggle-input
+                is-checked="checkbox.enabled"
+                element-id="workStatus"
+                callback-fn="saveWorkStatus()"
+        >
+        </toggle-input>
+        <div class="text-white bg-danger div-block" ng-if="!checkbox.enabled">Site Blocker is disabled</div>
+        <div ng-if="checkbox.enabled" class="div-block">&nbsp;</div>
+    </div>
+
+    
+    <br><br><br>
+    <div class="slide-container" ng-class="{ 'disabled-block' : !checkbox.enabled}">
+    
+        <div class="item">
+    
+          <div class="row" id="dashboard" >
+            <div class="col-lg-12">
+                <div class="input-group">
+                    <input
+                            type="text"
+                            class="form-control input-md"
+                            placeholder="Add site to block"
+                            id="custom_site"
+                            ng-model="data.newSite"
+                            ng-class="{ 'error' : data.errorSite}"
+                            ng-keydown="$event.keyCode === 13 && addSite()"
+                            ng-blur="onInputBlur()"
+                    >                     
+                <button class="btn btn-primary btn-md" ng-click="addSite()">
+                    <i class="fa fa-check"></i>
+                </button>               
+      
+                </div>
+                <div ng-if="data.errorSite" class="error-text">Invalid site url</div> 
+                    <div class="btn-group-sm mt-3">
+    
+                        <button class="btn btn-primary" ng-click="showLoadModal()" data-bs-toggle="modal" data-bs-target="#myModal">
+                            <i class="fa fa-arrow-circle-down"></i> Import
+                        </button>
+                        <button class="btn btn-primary" ng-click="showExportModal()" data-bs-toggle="modal" data-bs-target="#exportData">
+                            <i class="fa fa-arrow-circle-up"></i> Export
+                        </button>
+                    </div>
+    
+    
+    
+            </div>
+    
+            <div class="col-lg-12">
+                <br>
+    
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                        <tr>
+                            <th colspan="2">
+                                Blocked Site List ({{ siteList.length }})
+                                <span ng-click="sortList()"><i class="fa fa-sort"></i></span>
+                            </th>
+                            <th class="action_btns">
+                                <div class="btn-group" ng-show="siteList.length > 0">
+                                    <button class="btn btn-primary" ng-click="saveChanges()" title="Save changes">
+                                        <i class="fa fa-save"></i>
+                                    </button>
+                                    <button class="btn btn-secondary" ng-click="clearList()" title="Clear List">
+                                        <i class="fa fa-trash"></i>
+                                    </button>
+                                </div>
+                            </th>
+    
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="site in siteList | orderBy:'toString()':data.sortReverse track by $index">
+                            <td class="icon">
+                                <span class="fa_icon"
+                                      style="background-image: url('http://www.google.com/s2/favicons?domain={{site}}');"></span>
+                            </td>
+                            <td class='site_name'>
+                                <a ng-href="{{'http://' + site }}" target='_blank'>{{ site }}</a>
+                            </td>
+                            <td class='td_btn'>
+                                <i class="fa fa-minus-circle" ng-click="removeSite(site)"></i>
+                            </td>
+                        </tr>
+    
+    
+                        </tbody>
+                    </table>
+                </div>
+    
+                <p class="text-center">
+                    <button class="btn btn-primary btn-sm" ng-click="saveChanges()">
+                        <i class="fa fa-save"></i> Save changes
+                    </button>
+                </p>
+    
+            </div>
+    
+        </div>
+    
+        </div>
+    
+        <div class="item">       
+    
+          <div class="row" id="extraConfig" >
+            <div class="col-md-12">
+    
+                <p class="title-info text-center">Redirect to</p>
+    
+                <div class="input-group">
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="redirect_url"
+                        placeholder="Enter site url"
+                        ng-model="data.redirect_url"
+                        ng-keydown="$event.keyCode === 13 && saveRedirectUrl()"
+                        autocomplete="off"
+                     >
+                    <button
+                        class="btn btn-primary"
+                        ng-click="saveRedirectUrl()"
+                        > <i class="fa fa-check"></i>
+                    </button>
+                   
+                  </div>
+    
+                  <div ng-show="data.redirect_url">
+                    <a href="" ng-click="removeRedirectUrl()">Remove</a>
+                </div>
+    
+                <p class="figure-caption mt-3">Enter site url and all blocked sites will be redirected to it</p>
+    
+            </div>
+           
+        </div>
+    
+             
+        </div>
+    
+        <div class="item">
+            
+                <p class="text-center title-info">Block site if url contains this keywords</p>  
+                    <div class="input-group">
+                        <input id="add-block-key" type="text" class="form-control input-md" placeholder="Add new key"
+                            ng-keydown="$event.keyCode === 13 && addBlockKey()" ng-model="data.newBlockKey">
+                      
+                            <button class="btn btn-primary btn-md" ng-click="addBlockKey()">
+                                <i class="fa fa-plus"></i>
+                            </button>
+                        
+                    </div>
+                    <div class="mt-2">
+                        <button 
+                            class="btn btn-primary btn-sm" 
+                            ng-click="loadBlockList()" 
+                            data-bs-toggle="modal" 
+                            data-bs-target="#loadBlockKey"
+                        >
+                            <i class="fa fa-arrow-circle-down"></i> Import
+                        </button>
+                        <button 
+                            class="btn btn-primary btn-sm" 
+                            ng-click="exportBlockKeys()" 
+                            data-bs-toggle="modal" 
+                            data-bs-target="#exportData"
+                            ng-show="tagList.length > 0"
+                        >
+                            <i class="fa fa-arrow-circle-up"></i> Export
+                        </button>
+                        <button class="btn btn-danger btn-sm"  ng-click="removeAllKeys()" ng-if="tagList.length > 0">
+                            <i class="fa fa-remove"></i> Delete all
+                        </button>
+    
+                    </div>
+        
+                    <br>
+                    <ul class="keyword-list">
+                        <li class="keyword-list-item" ng-repeat="tag in tagList track by $index">
+                            {{ tag }}
+                            <span class="fa fa-trash pull-right delete-key" ng-click="removeBlockKey($index)"></span>
+                        </li>
+                    </ul>
+      
+               
+           
+                <div class="accordion" id="accordionExample">
+        
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Information
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+        
+        
+                                <div>
+                                    <p>
+                                        If url will contain one of this word it will be blocked.
+                                        Example, if you add <code>tank</code> key then will be blocked all sites which
+                                        contains
+                                        <code>tank</code>
+                                        in url.
+                                    </p>
+                                    <ul>
+                                        <li>https://worldof<b>tank</b>s.ru/</li>
+                                        <li>https://<b>tank</b>ionline.com/</li>
+                                        <li>https://www.google.com/search?q=<b>tank</b></li>
+                                    </ul>
+                                    <h4 class="block_key">Block specific  page</h4>
+                                    <p>
+                                        If you want to block specific page of site, e.g.
+                                        <strong>https://apps.facebook.com/worldpokerclub</strong>
+                                        you need to add key like this <strong>facebook.com/worldpokerclub</strong> (without
+                                        http:// or https://)
+                                    </p>
+                                    <table class="table table-responsive block-keys">
+                                        <thead>
+                                            <tr>
+                                                <td>Key</td>
+                                                <td>Will be blocked</td>
+                                            </tr>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <code>youtube.com/watch?v=_omxhYGKkDE</code>
+                                                    </td>
+                                                    <td>
+                                                        <a href="https://www.youtube.com/watch?v=_omxhYGKkDE" target="_blank">https://www.youtube.com/watch?v=_omxhYGKkDE</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <code>facebook.com/worldpokerclub</code>
+                                                    </td>
+                                                    <td>
+                                                        <a href="https://apps.facebook.com/worldpokerclub" target="_blank">https://apps.facebook.com/worldpokerclub</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <code>instagram.com/jlo</code>
+                                                    </td>
+                                                    <td>
+                                                        <a href="https://www.instagram.com/jlo" target="_blank">https://www.instagram.com/jlo</a>
+                                                    </td>
+                                                </tr>
+                                                
+                                            </tbody>
+                                        </thead>
+                                    </table>
+                                    
+                                </div>
+        
+                            </div>
+                        </div>
+                    </div>
+        
+                </div>
+            
+        </div>
+    
+    
+        <div class="item">
+            <p class="title-info text-center">White time config</p>
+          <div class="row" >
+    
+            <div class="col-md-4">
+                <p class="title-info">
+                    <label for="hour_option">Status</label>
+                </p>
+            </div>
+            <div class="col-md-4">
+                <toggle-input is-checked="checkbox.optionHour" element-id="hour_option">
+                </toggle-input>
+            </div>
+            <div class="col-md-12">
+                <div ng-show="checkbox.optionHour">
+    
+                    <table class="table table-bordered">
+                        <tr>
+                            <td>From</td>
+                            <td>To</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr ng-repeat="hour in data.hour_config_extra track by $index">
+                            <td>
+                                <select class="form-control" ng-model="data.hour_config_extra[$index].start">
+                                    <option ng-value="time" ng-repeat="time in data.timeRange">
+                                        {{ time }}
+                                    </option>
+                                </select>
+                            </td>
+                            <td>
+                                <select class="form-control" ng-model="data.hour_config_extra[$index].end">
+                                    <option ng-value="time" ng-repeat="time in data.timeRange">
+                                        {{ time }}
+                                    </option>
+                                </select>
+                            </td>
+                            <td class="text-center td_btn">
+                              
+                                <i class="fa fa-minus-circle" ng-click="removeHourItem($index)"></i>
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="mt-2 mb-2">
+                        <a href="" ng-click="addTime()" class="pull-right">Add time</a>
+                    </div>
+                    <div class="clearfix"></div>              
+    
+                    <div>
+                        <p class="figure-caption">Select week days</p>                  
+                        <ul id="daysOfWeek" class="list-group">
+                            <li ng-repeat="name in dayList track by $index" class="list-group-item">
+                                <label for="d{{$index}}">
+                                    <input
+                                            id="d{{$index}}"
+                                            type="checkbox"
+                                            name="selectedDays[]"
+                                            value="{{ $index }}"
+                                            ng-checked="days.indexOf($index) > -1"
+                                            ng-click="toggleDaySelect($index)"
+                                    > {{ name }}
+                                </label>
+                            </li>
+    
+                        </ul>
+                    </div>
+    
+                </div>
+               
+            </div>
+            
+            <p class="mt-3">
+                <button class="btn btn-primary btn-sm" ng-click="saveHourChanges()"> 
+                    <i class="fa fa-save"></i> Save
+                </button>
+            </p>
+    
+    
+        </div>
+        </div>
+        
+    
+        <div class="item">
+           
+                <p class="text-center title-info">Extra Configuration</p>
+                
+                    <table class="table extra-config">
+                        <tr>
+                            <td>
+                                <label class="modal_label" for="close_blobed_sites">Close blocked tabs
+                                    automatically</label>
+                            </td>
+                            <td class="right">
+                                <toggle-input
+                                        is-checked="checkbox.optionCloseTabs"
+                                        element-id="close_blobed_sites"
+                                        callback-fn="saveExtraConfig()"
+                                >
+                                </toggle-input>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="modal_label" for="whiteList">White List Mode</label>
+                            </td>
+                            <td class="right">
+                                <toggle-input
+                                        is-checked="checkbox.whiteList"
+                                        element-id="whiteList"
+                                        callback-fn="saveExtraConfig()"
+                                >
+                                </toggle-input>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="modal_label" for="subdomainOption">Block subdomains</label>
+                            </td>
+                            <td class="right">
+                                <toggle-input
+                                        is-checked="checkbox.subdomainOption"
+                                        element-id="subdomainOption"
+                                        callback-fn="saveExtraConfig()"
+                                >
+                                </toggle-input>
+                            </td>
+                        </tr>
+    
+                        <tr>
+                            <td>
+                                <label class="modal_label" for="iframeOption">Block sites frames in other
+                                    sites</label>
+                            </td>
+                            <td class="right">
+                                <toggle-input
+                                        is-checked="checkbox.iframeOption"
+                                        element-id="iframeOption"
+                                        callback-fn="saveExtraConfig()"
+                                >
+                                </toggle-input>
+                            </td>
+                        </tr>
+                    </table>
+    
+    
+    
+                    <div class="accordion" id="accordionConfig">
+        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingConfig">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseConfig" aria-expanded="false" aria-controls="collapseTwo">
+                                    Information
+                                </button>
+                            </h2>
+                            <div id="collapseConfig" class="accordion-collapse collapse" aria-labelledby="headingConfig"
+                                data-bs-parent="#accordionConfig">
+                                <div class="accordion-body">
+                                    <div class="info-block"> 
+                                        <h3>Close blocked tabs automatically</h3>
+                                        <p>
+                                            Activate this options and blocked sites will be closed immediately
+                                        </p>
+                    
+                                        <h3>White List Mode</h3>
+                                        <p>
+                                            Activate this option and all sites will be blocked except the ones in the list.
+                                        </p>
+                    
+                                        <h3>Block subdomains</h3>
+                                        <p>When you block for example&nbsp;<strong>facebook.com</strong> will blocked all
+                                            subdomains, e.g. <strong>apps.facebook.com, ru-ru.facebook.com</strong></p>
+                    
+                                        <h3>Block sites frames in other sites</h3>
+                                        <p>For example if <strong>facebook.com</strong> is blocked, will be blocked all <strong>facebook.com</strong>
+                                            frames in visited sites. Example, facebook like box</p>
+                                    </div>
+            
+                                    
+                                </div>
+                            </div>
+                        </div>
+            
+                    </div>
+    
+        </div>
+    
+        <div class="item">
+            <div id="set_password_modal">
+                <div>
+        
+                    <p class="title-info text-center">Password Settings</p>    
+        
+                    <div class="row">
+                        <div class="col-md-12">
+        
+                            <div ng-show="!data.showPassInput">
+                                <div class="input-group mb-3">    
+                                    <input 
+                                        type="password" 
+                                        class="form-control set-password" 
+                                        id="password"
+                                        placeholder="Enter password" 
+                                        ng-model="data.userPassword" 
+                                        typeof="text"
+                                        ng-keydown="$event.keyCode === 13 && setPassword()"
+                                        >
+           
+                                    <button class="btn btn-primary" id="save_pass" ng-click="setPassword()">
+                                        <i class="fa fa-save set-pass"></i>
+                                    </button>
+                                </div>
+                            </div>
+        
+        
+                            <p class="text-center" ng-show="data.showPassInput">
+                                <span>Password is used</span>
+                                <button class="btn btn-danger btn-sm" id="remove_pass" title="Remove password"
+                                    ng-click="removePassword()">
+                                    <i class="fa fa-remove"></i> Remove password
+                                </button>
+                            </p>
+                            <br>
+                        </div>
+        
+        
+                    </div>
+                    <p class="figure-caption">Protect your blocked site list via password</p>
+           
+        
+                </div>
+            </div>
+        
+        </div>
+    
+    
+    
+    
+    </div>
+    </div>
+    
+    <!--Modals-->
+    <div id="myModal" class="modal fade" role="dialog">
+    
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h4>Load list</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                  <p class="figure-caption"> Enter site list to block separated by new line (with 'enter')</p>
+                  <p>
+                          <textarea
+                                  class="form-control"
+                                  rows="10"
+                                  id="site_list"
+                                  ng-model="data.loadDataListModel"
+                          >
+                      </textarea>
+                  </p>
+                  <p>
+                      <button
+                              class="btn btn-md btn-primary"
+                              id="load_list"
+                              ng-click="loadSiteDataList()"
+                      >
+                          Load
+                      </button>
+                  </p>
+                  <div id="footer_result">
+                      <p ng-repeat="item in data.loadDataResult">
+                          <b ng-class="item.className">
+                              {{ item.site }}
+                          </b>
+                          {{ item.message }}
+                      </p>
+                  </div>
+              </div>
+          </div>
+      </div>
+    
+    </div>
+    
+    <div id="exportData" class="modal fade" role="dialog">
+    
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+           
+                  <h4>Export list</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                  <p>
+                          <textarea
+                                  id="exportTxt"
+                                  class="form-control"
+                                  rows="10"
+                                  ng-model="data.exportDataModel"
+                          >
+                          </textarea>
+                  </p>
+    
+                  <p>
+                     &nbsp;
+                      <a
+                              class="btn btn-sm btn-primary pull-right"
+                              id="copyText"
+                              ng-click="copyText()"
+                      >Copy</a>
+                  </p>
+              </div>
+          </div>
+      </div>
+    
+    </div>
+    
+    <!-- load block key -->
+    <div id="loadBlockKey" class="modal fade" role="dialog">
+    
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">       
+                  <h4>Load list to block</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">             
+                  <p>
+                          <textarea
+                                  class="form-control"
+                                  rows="10"
+                                  id="block_list"
+                                  ng-model="data.loadBlockKey"
+                          >
+                      </textarea>
+                  </p>
+                  <p class="figure-caption"> Enter key list to block separated by new line (with 'enter')</p>
+                  <p>
+                      <button
+                              class="btn btn-md btn-primary"
+                              id="load_key_list"
+                              ng-click="loadKeyDataList()"
+                      >
+                          Load
+                      </button>
+                  </p>
+                  
+              </div>
+          </div>
+      </div>
+    
+    </div>
+    
+    <div id="accessDashboardPassword" class="modal fade" role="dialog">
+    
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                  
+                  <h4>Enter password</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                  <div class="input-group">
+                      <input
+                              autofocus
+                              type="password"
+                              id="access_user_password"
+                              class="form-control"
+                              ng-model="data.accessPassword"
+                              ng-keydown="$event.keyCode === 13 && checkPassword()"
+                      >
+                      
+                              <button
+                                      class="btn btn-primary"
+                                      id="accessPasswordConfirm"
+                                      ng-click="checkPassword()"
+                              >
+                          <i class="fa fa-check"></i>
+                      </button>
+    
+                   
+                  </div>
+                  <br>
+                  <p id="removed_site" ng-if="!data.sitetoIsUnblocked && data.sitetoUnblock">
+                      to unblock
+                      <a
+                              ng-href="{{ 'http://' + data.sitetoUnblock }}"
+                              target="_blank"
+                      >
+                          {{ data.sitetoUnblock }}
+                      </a>
+                  </p>
+                  <p ng-if="data.sitetoIsUnblocked">
+                      <a ng-href="{{ 'http://' + data.sitetoUnblock }}" target="_blank">{{ data.sitetoUnblock }}</a>
+                      is unblocked !
+                  </p>
+    
+              </div>
+          </div>
+      </div>
+    
+    </div>
+  </div>
+
+
+
+</body>
+
+</html>

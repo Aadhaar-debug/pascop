@@ -1,0 +1,177 @@
+Requestid,StatusCode,ip,url,type,timestamp,tableid,fromcache,method,target
+
+6171,	200	,2a00:1450:4006:805::2003,https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hjQ.ttf	,font,	1702391635007.778,	1419931202,	true,	GET,malicious
+6170,	200	,2a00:1450:4006:805::2003,https://fonts.gstatic.com/s/robotomono/v23/L0xuDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_3vq_ROW9.ttf,	font,	1702391635003.053	,1419931202,	true,	GET,good
+6169,	200	,151.101.2.217,	https://cdn.plot.ly/plotly-2.6.3.min.js,	script	,1702391634620.656	,1419931202	,true	,GET,good
+6168,	200	,2606:4700::6811:190e,	https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS_HTML.js?V=2.7.5	,script	,1702391633630.013,	1419931202	,true,	GET,good
+6167,	200	,2606:4700::6811:190e,	https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML,	script	,1702391633586.593,	1419931202	,true,	GET,good
+6165,	200	,2606:4700:20::6818:b007,	https://api.cdnjs.com/libraries/mathjax?fields=version	,xmlhttprequest,	1702391633303.531	,1419931202	,true	,GET,good
+6162,	200	,35.244.233.98,	https://www.kaggle.com/static/assets/vendor.js?v=6495db0178f667c72ee8,	script	,1702391633018.316	,1419931202	,true,	GET,good
+6161,	200	,35.244.233.98,	https://www.kaggle.com/static/assets/notebookviewer.js?v=2994e193ba30c469e7eb,	script	,1702391632970.7	,1419931202	,true,	GET,good
+6160,	200	,35.244.233.98,	https://www.kaggle.com/static/assets/vendor.css?v=7ab5aac43193369ca22e,	stylesheet	,1702391632946.894	,1419931202	,true	,GET,malicious
+6159,	200	,35.244.233.98,	https://www.kaggle.com/static/assets/notebookviewer.css?v=9bc4d7cbafce57fcb2bd,	stylesheet	,1702391632938.899	,1419931202	,true,	GET,malicious
+6158,	200	,35.244.233.98,	https://www.kaggle.com/static/assets/runtime.js?v=ab6cc099b848f16615bc	,script	,1702391632928.629	,1419931202	,true	,GET,malicious
+6155,	200	,35.190.26.106,https://www.kaggleusercontent.com/static/mathjax/2.7.9/extensions/Safe.js?V=2.7.9	,script,	1702391632969.243,	1419931202	,true,	GET,good
+6154,	200	,35.190.26.106,https://www.kaggleusercontent.com/static/mathjax/2.7.9/config/TeX-AMS-MML_HTMLorMML.js?V=2.7.9	,script	,1702391631937.388,	1419931202	,true	,GET,good
+6153,	200	,2a00:1450:4006:800::200a,	https://identitytoolkit.googleapis.com/v1/accounts:lookup?key=AIzaSyD260rHHEeMVDGVqyWq0yszmLJ-5Cgkqrk	,xmlhttprequest	,1702391632344.165	,1419931202	,false,good	,POST
+6152,	200	,2a00:1450:4006:800::200a,	https://identitytoolkit.googleapis.com/v1/accounts:signInWithCustomToken?key=AIzaSyD260rHHEeMVDGVqyWq0yszmLJ-5Cgkqrk,	xmlhttprequest,	1702391632656.412,	14,good19931202,	false,	POST
+6151,	200	,35.244.233.98,	https://www.kaggle.com/api/i/kernels.KernelsService/GetKernelVersion	,xmlhttprequest,	1702391631545.624	,1419931202	,false	,POST,malicious
+6150,	200	,35.244.233.98,	https://www.kaggle.com/api/i/tags.TagService/GetTagsById,	xmlhttprequest,	1702391631401.213	,1419931202	,false	,POST,good
+6149,	200	,35.244.233.98,	https://www.kaggle.com/api/i/users.NudgeService/CheckForNudge	,xmlhttprequest	,1702391631103.207	,1419931202	,false	,POST,malicious
+6148,	200	,35.244.233.98,	https://www.kaggle.com/api/i/active_events.ActiveEventService/GetActiveEventsFirebaseConfig,	xmlhttprequest,	1702391631109.1	,1419931202	,false,	POST,good
+6147,	200	,35.244.233.98,	https://www.kaggle.com/static/images/kernel/viewer/comments.svg,	image	,1702391631558.884,	1419931202	,true,	GET,malicious
+6146,	200	,35.244.233.98,	https://www.kaggle.com/static/images/kernel/viewer/logs.svg	,image	,1702391631556.464,	1419931202	,true	,GET,malicious
+6145,	200	,35.244.233.98,	https://www.kaggle.com/static/images/kernel/viewer/output.svg	,image,	1702391631554.685	,1419931202	,true,	GET,malicious
+6144,	200	,35.244.233.98,	https://www.kaggle.com/static/images/kernel/viewer/input.svg	,image,	1702391631549.064,	1419931202	,true,	GET,malicious
+6143,	200	,35.244.233.98,	https://www.kaggle.com/api/i/education.EducationService/TrackEducation	,xmlhttprequest,	1702391631063.204,	1419931202	,false,	POST,malicious
+6142,	200	,35.244.233.98,	https://www.kaggle.com/api/i/kernels.KernelsService/ListKernelVersions	,xmlhttprequest,	1702391631088.687,	1419931202,	false,	POST,good
+6141,	200	,35.244.233.98,	https://www.kaggle.com/api/i/notifications.SubscriptionService/GetMySubscribeState	,xmlhttprequest	,1702391631073.287,	1419931202,	false,	POST,good
+6140,	200	,35.244.233.98,	https://www.kaggle.com/api/i/kernels.KernelsService/GetKernelCategoryIds	,xmlhttprequest,	1702391631060.884,	1419931202	,false	,POST,good
+6137,	200	,35.244.233.98,	https://www.kaggle.com/api/i/notifications.SubscriptionService/GetMySubscribeState,	xmlhttprequest	,1702391631054.881,	1419931202	,false	,POST,good
+6136,	200	,35.244.233.98,	https://www.kaggle.com/api/i/diagnostics.MetricsService/RecordPageLoadMetrics	,xmlhttprequest	,1702391631015.097	,1419931202,false,	POST,good
+6133,	200	,2a00:1450:4006:806::201b,	https://storage.googleapis.com/kaggle-avatars/thumbnails/1092946-kg.jpg	,image	,1702391631196.439,	1419931202	,true	,GET,good
+6132,	200	,2a00:1450:4006:806::201b,	https://storage.googleapis.com/kaggle-avatars/thumbnails/3413400-kg.jpeg	,image	,1702391631032.834	,1419931202	,true	,GET,good
+6131,	200	,2a00:1450:4006:806::201b,	https://storage.googleapis.com/kaggle-organizations/1099/thumbnail.png?r=980	,image	,1702391631075.509	,1419931202,	true,	GET,good
+6130,	200	,2a00:1450:4006:806::201b,	https://storage.googleapis.com/kaggle-avatars/thumbnails/6437951-kg.jpeg	,image	,1702391631075.86,	1419931202	,true	,GET,good
+6129,	200	,2a00:1450:4006:806::201b,	https://storage.googleapis.com/kaggle-avatars/thumbnails/11782859-gr.jpg	,image,	1702391631162.122	,1419931202	,true,	GET,good
+6128,	200	,2a00:1450:4006:800::200e,	https://apis.google.com/_/scs/abc-static/_/js/k=gapi.lb.en.coKrc9A11Ng.O/m=auth2,	script	,1702391630673.142	,1419931202,	true,	GET,good
+6127,	200	,35.190.26.106,	https://www.kaggleusercontent.com/static/mathjax/2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML,	script	,1702391631532.139	,1419931202	,true,	GET,good
+6126,	200	,35.244.233.98,	https://www.kaggle.com/static/images/site-logo.svg,	image,	1702391630028.895	,1419931202	,true	,GET,good
+6125,	200	,35.244.233.98,	https://www.kaggle.com/api/i/users.UsersService/GetCurrentUser	,xmlhttprequest	,1702391630324.472	,1419931202	,false,	POST,good
+6124,	200	,35.244.233.98,	https://www.kaggle.com/api/i/users.RecentlyViewedService/GetRecentlyViewedItems	,xmlhttprequest,	1702391630649.265,	1419931202	,false,	POST,malicious
+6123,	200	,35.244.233.98,	https://www.kaggle.com/api/i/users.RecentlyViewedService/GetRecentlyViewedItems	,xmlhttprequest,	1702391630630.382	,1419931202	,false	,POST,good
+6122,	200	,35.244.233.98,	https://www.kaggle.com/api/i/notifications.NotificationsService/GetUserNotifications,	xmlhttprequest,	1702391630638.007	,1419931202	,false,	POST,malicious
+6121,	200	,35.244.233.98,	https://www.kaggle.com/api/i/users.BookmarkService/ListAllBookmarks	,xmlhttprequest,	1702391630638.975	,1419931202,	false,	POST,good
+6120,	200	,2a00:1450:4006:80e::2003,	https://fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7.woff2,	font	,1702391629980.189	,1419931202	,true,	GET,good
+6119,	200	,2a00:1450:4006:80e::2003,	https://fonts.gstatic.com/s/googlematerialicons/v139/Gw6kwdfw6UnXLJCcmafZyFRXb3BL9rvi0QZG3Q.woff2	,font,	1702391629980.314,	1419931202	,true	,GET,good
+6118,	200	,35.244.233.98,	https://www.kaggle.com/api/i/kernels.KernelsService/GetAcceleratorQuotaStatistics	,xmlhttprequest	,1702391630584.344	,1419931202,	false	,POST,good
+6117,	200	,35.244.233.98,	https://www.kaggle.com/static/assets/9932.57545777964f98b614dc.js	,script	,1702391630657.925,	1419931202,true	,GET,malicious
+6116,	200	,35.244.233.98,	https://www.kaggle.com/static/assets/7050.6dda534df2af76ced9a9.js	,script	,1702391630657.851,	1419931202,true	,GET,good
+6115,	200	,35.244.233.98,	https://www.kaggle.com/static/assets/9917.984295754dce90d0a790.js	,script	,1702391630656.193,	1419931202,true	,GET,malicious
+6114,	200	,35.244.233.98,	https://www.kaggle.com/static/assets/kernelViewerMaterialContainer.c086ce973e1a04a18de5.js	,script	,1702391630665.77,	1419931202,	true	,GET,good
+6113,	200	,35.244.233.98,	https://www.kaggle.com/static/assets/kernelViewerMaterialContainer.56ec1322d855ad0f5482.css	,stylesheet,	1702391629953.647,	1419931202,	true,	GET,good
+6112,	200	,35.244.233.98,	https://www.kaggle.com/static/assets/2918.f8609d9d0b6666c0f2b1.js	,script,1702391630654.897	,1419931202,true,	GET,good
+6111,	200	,35.244.233.98,	https://www.kaggle.com/static/assets/3483.ac068460fb217e9e0be1.js	,script,1702391630657.748	,1419931202,true,	GET,malicious
+6110,	200	,35.244.233.98,	https://www.kaggle.com/static/assets/2045.b905f2bc0a0c9bf4dad5.js	,script,1702391630645.984	,1419931202,true,	GET,good
+6109,	200	,35.244.233.98,	https://www.kaggle.com/static/assets/5166.0b1fea40a83df3b87a3b.js	,script,1702391630645.862	,1419931202,true,	GET,malicious
+6108,	200	,35.244.233.98,	https://www.kaggle.com/static/assets/3220.c88b568338ec6aa56e0c.js	,script,1702391630645.738	,1419931202,true,	GET,malicious
+6107,	200	,35.244.233.98,	https://www.kaggle.com/static/assets/9620.d0df9a9b90b8f8762560.js	,script,1702391630645.447	,1419931202,true,	GET,good
+6106,	200	,35.244.233.98,	https://www.kaggle.com/static/assets/3400.42713f1e0cc9641b411c.js	,script,1702391630648.839	,1419931202,true,	GET,malicious
+6105,	200	,35.244.233.98,	https://www.kaggle.com/api/i/users.AccountService/GenerateAnalyticsToken	,xmlhttprequest	,1702391630306.457,	1419931202	,false,	POST,good
+6104,	200	,35.244.233.98,	https://www.kaggle.com/api/i/users.UsersService/GetCurrentUser	,xmlhttprequest,	1702391630306.741,	1419931202,	false,	POST,good
+6103,	200	,2a00:1450:4006:800::200e,	https://apis.google.com/js/api.js	,script,	1702391630160.41,	1419931202	,true,	GET,good
+6102,	200	,2a02:26f0:b80:4::210:9552,	https://use.typekit.net/tql2nih.css	,stylesheet,	1702391630490.8	,1419931202	,false,	GET,malicious
+6101,	200	,2a02:26f0:b80:4::210:954d,	https://use.typekit.net/tql2nih.css	,stylesheet	,1702391629533.58,	1419931202	,true,	GET,good
+6100,	200	,2a00:1450:4006:808::200a,	https://fonts.googleapis.com/css?family=Inter:400,	stylesheet	,1702391629529.889,	1419931202	,true,	GET,malicious
+6099,	200	,2a00:1450:4006:808::200a,	https://fonts.googleapis.com/icon?family=Google+Material+Icons&display=block	,stylesheet,	1702391629529.606,	1419931202,	true,	GET,good
+6098,	200	,35.244.233.98,	https://www.kaggle.com/static/assets/app.js?v=ae6a1d7a4a9ef3b2a9d4	,script,	1702391629100.404,	1419931202	,true	,GET,good
+6097,	200	,35.244.233.98,	https://www.kaggle.com/static/assets/vendor.js?v=6495db0178f667c72ee8	,script,	1702391629108.653,	1419931202	,true,	GET,good
+6096,	200	,35.244.233.98,	https://www.kaggle.com/static/assets/runtime.js?v=ab6cc099b848f16615bc,	script,	1702391629072.54,	1419931202	,true,	GET,good
+6095,	200	,35.244.233.98,	https://www.kaggle.com/static/assets/app.css?v=571625ccb36e548ec646	,stylesheet	,1702391629075.705,	1419931202	,true,	GET,good
+6094,	200	,35.244.233.98,	https://www.kaggle.com/static/assets/vendor.css?v=7ab5aac43193369ca22e	,stylesheet	,1702391629074.984,	1419931202	,true	,GET,good
+6093,	200	,2606:4700:4400::6812:25e4,	https://chat.openai.com/ces/v1/b	,xmlhttprequest	,1702391629939.505,	1419931201,	false,	POST,good
+6092,	200	,35.244.233.98,	https://www.kaggle.com/code/sasakitetsuya/spam-url-classification-by-extra-trees-classifier	,main_frame,	1702391629045.925,	1419931202	,false,	GET,good
+6091,	200	,2606:4700:4400::6812:25e4,https://chat.openai.com/ces/v1/b	,xmlhttprequest	,1702391619263.417,	1419931201	,false	,POST,good
+6090,	200	,2a00:1450:4006:811::200e,https://accounts.youtube.com/RotateCookies,	xmlhttprequest	,1702391606647.776	,1419931199,	false,	POST,good
+6089,	200	,2606:4700:4400::6812:25e4,https://chat.openai.com/ces/v1/b	,xmlhttprequest,1702391604835.459,	1419931201,	false,	POST,good
+6088,	200	,2606:4700:4400::6812:25e4,https://chat.openai.com/ces/v1/b	,xmlhttprequest,1702391600435.003,	1419931201,	false,	POST,malicious
+6087,	200	,2606:4700:4400::6812:25e4,https://chat.openai.com/ces/v1/b	,xmlhttprequest,1702391595192.853,	1419931201,	false,	POST,good
+6086,	200	,2a00:1450:4006:800::200d,https://accounts.google.com/RotateCookies	,xmlhttprequest	,1702391586449.093	,1419931221	,false	,POST,good
+6150,	200	,35.244.233.98,	https://www.kaggle.com/api/i/tags.TagService/GetTagsById,	xmlhttprequest,	1702391631401.213	,1419931202	,false	,POST,good
+6149,	200	,35.244.233.98,	https://www.kaggle.com/api/i/users.NudgeService/CheckForNudge	,xmlhttprequest	,1702391631103.207	,1419931202	,false	,POST,good
+6148,	200	,35.244.233.98,	https://www.kaggle.com/api/i/active_events.ActiveEventService/GetActiveEventsFirebaseConfig,	xmlhttprequest,	1702391631109.1	,1419931202	,false,	POST,good
+6147,	200	,35.244.233.98,	https://www.kaggle.com/static/images/kernel/viewer/comments.svg,	image	,1702391631558.884,	1419931202	,true,	GET,good
+6146,	200	,35.244.233.98,	https://www.kaggle.com/static/images/kernel/viewer/logs.svg	,image	,1702391631556.464,	1419931202	,true	,GET,good
+6145,	200	,35.244.233.98,	https://www.kaggle.com/static/images/kernel/viewer/output.svg	,image,	1702391631554.685	,1419931202	,true,	GET,good
+6144,	200	,35.244.233.98,	https://www.kaggle.com/static/images/kernel/viewer/input.svg	,image,	1702391631549.064,	1419931202	,true,	GET,good
+6143,	200	,35.244.233.98,	https://www.kaggle.com/api/i/education.EducationService/TrackEducation	,xmlhttprequest,	1702391631063.204,	1419931202	,false,	POST,good
+6142,	200	,35.244.233.98,	https://www.kaggle.com/api/i/kernels.KernelsService/ListKernelVersions	,xmlhttprequest,	1702391631088.687,	1419931202,	false,	POST,good
+6141,	200	,35.244.233.98,	https://www.kaggle.com/api/i/notifications.SubscriptionService/GetMySubscribeState	,xmlhttprequest	,1702391631073.287,	1419931202,	false,	POST,good
+6140,	200	,35.244.233.98,	https://www.kaggle.com/api/i/kernels.KernelsService/GetKernelCategoryIds	,xmlhttprequest,	1702391631060.884,	1419931202	,false	,POST,good
+6151,	200	,35.244.233.98,	https://www.kaggle.com/api/i/kernels.KernelsService/GetKernelVersion	,xmlhttprequest,	1702391631545.624	,1419931202	,false	,POST,good
+6150,	200	,35.244.233.98,	https://www.kaggle.com/api/i/tags.TagService/GetTagsById,	xmlhttprequest,	1702391631401.213	,1419931202	,false	,POST,good
+6149,	200	,35.244.233.98,	https://www.kaggle.com/api/i/users.NudgeService/CheckForNudge	,xmlhttprequest	,1702391631103.207	,1419931202	,false	,POST,good
+6148,	200	,35.244.233.98,	https://www.kaggle.com/api/i/active_events.ActiveEventService/GetActiveEventsFirebaseConfig,	xmlhttprequest,	1702391631109.1	,1419931202	,false,	POST,good
+6147,	200	,35.244.233.98,	https://www.kaggle.com/static/images/kernel/viewer/comments.svg,	image	,1702391631558.884,	1419931202	,true,	GET,good
+6146,	200	,35.244.233.98,	https://www.kaggle.com/static/images/kernel/viewer/logs.svg	,image	,1702391631556.464,	1419931202	,true	,GET,good
+6145,	200	,35.244.233.98,	https://www.kaggle.com/static/images/kernel/viewer/output.svg	,image,	1702391631554.685	,1419931202	,true,	GET,good
+6144,	200	,35.244.233.98,	https://www.kaggle.com/static/images/kernel/viewer/input.svg	,image,	1702391631549.064,	1419931202	,true,	GET,good
+6143,	200	,35.244.233.98,	https://www.kaggle.com/api/i/education.EducationService/TrackEducation	,xmlhttprequest,	1702391631063.204,	1419931202	,false,	POST,good
+6142,	200	,35.244.233.98,	https://www.kaggle.com/api/i/kernels.KernelsService/ListKernelVersions	,xmlhttprequest,	1702391631088.687,	1419931202,	false,	POST,good
+6141,	200	,35.244.233.98,	https://www.kaggle.com/api/i/notifications.SubscriptionService/GetMySubscribeState	,xmlhttprequest	,1702391631073.287,	1419931202,	false,	POST,good
+6140,	200	,35.244.233.98,	https://www.kaggle.com/api/i/kernels.KernelsService/GetKernelCategoryIds	,xmlhttprequest,	1702391631060.884,	1419931202	,false	,POST,good
+6120,	200	,2a00:1450:4006:80e::2003,	https://fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7.woff2,	font	,1702391629980.189	,1419931202	,true,	GET,good
+6119,	200	,2a00:1450:4006:80e::2003,	https://fonts.gstatic.com/s/googlematerialicons/v139/Gw6kwdfw6UnXLJCcmafZyFRXb3BL9rvi0QZG3Q.woff2	,font,	1702391629980.314,	1419931202	,true	,GET,good
+6118,	200	,35.244.233.98,	https://www.kaggle.com/api/i/kernels.KernelsService/GetAcceleratorQuotaStatistics	,xmlhttprequest	,1702391630584.344	,1419931202,	false	,POST,good
+6117,	200	,35.244.233.98,	https://www.kaggle.com/static/assets/9932.57545777964f98b614dc.js	,script	,1702391630657.925,	1419931202,true	,GET,good
+6116,	200	,35.244.233.98,	https://www.kaggle.com/static/assets/7050.6dda534df2af76ced9a9.js	,script	,1702391630657.851,	1419931202,true	,GET,good
+6115,	200	,35.244.233.98,	https://www.kaggle.com/static/assets/9917.984295754dce90d0a790.js	,script	,1702391630656.193,	1419931202,true	,GET,good
+6114,	200	,35.244.233.98,	https://www.kaggle.com/static/assets/kernelViewerMaterialContainer.c086ce973e1a04a18de5.js	,script	,1702391630665.77,	1419931202,	true	,GET,good
+6113,	200	,35.244.233.98,	https://www.kaggle.com/static/assets/kernelViewerMaterialContainer.56ec1322d855ad0f5482.css	,stylesheet,	1702391629953.647,	1419931202,	true,	GET,good
+6112,	200	,35.244.233.98,	https://www.kaggle.com/static/assets/2918.f8609d9d0b6666c0f2b1.js	,script,1702391630654.897	,1419931202,true,	GET,good
+6111,	200	,35.244.233.98,	https://www.kaggle.com/static/assets/3483.ac068460fb217e9e0be1.js	,script,1702391630657.748	,1419931202,true,	GET,good
+6110,	200	,35.244.233.98,	https://www.kaggle.com/static/assets/2045.b905f2bc0a0c9bf4dad5.js	,script,1702391630645.984	,1419931202,true,	GET,good
+6109,	200	,35.244.233.98,	https://www.kaggle.com/static/assets/5166.0b1fea40a83df3b87a3b.js	,script,1702391630645.862	,1419931202,true,	GET,good
+6108,	200	,35.244.233.98,	https://www.kaggle.com/static/assets/3220.c88b568338ec6aa56e0c.js	,script,1702391630645.738	,1419931202,true,	GET,good
+6107,	200	,35.244.233.98,	https://www.kaggle.com/static/assets/9620.d0df9a9b90b8f8762560.js	,script,1702391630645.447	,1419931202,true,	GET,good
+6106,	200	,35.244.233.98,	https://www.kaggle.com/static/assets/3400.42713f1e0cc9641b411c.js	,script,1702391630648.839	,1419931202,true,	GET,good
+6105,	200	,35.244.233.98,	https://www.kaggle.com/api/i/users.AccountService/GenerateAnalyticsToken	,xmlhttprequest	,1702391630306.457,	1419931202	,false,	POST,good
+6104,	200	,35.244.233.98,	https://www.kaggle.com/api/i/users.UsersService/GetCurrentUser	,xmlhttprequest,	1702391630306.741,	1419931202,	false,	POST,good
+6103,	200	,2a00:1450:4006:800::200e,	https://apis.google.com/js/api.js	,script,	1702391630160.41,	1419931202	,true,	GET,good
+6102,	200	,2a02:26f0:b80:4::210:9552,	https://use.typekit.net/tql2nih.css	,stylesheet,	1702391630490.8	,1419931202	,false,	GET,good
+6101,	200	,2a02:26f0:b80:4::210:954d,	https://use.typekit.net/tql2nih.css	,stylesheet	,1702391629533.58,	1419931202	,true,	GET,good
+6100,	200	,2a00:1450:4006:808::200a,	https://fonts.googleapis.com/css?family=Inter:400,	stylesheet	,1702391629529.889,	1419931202	,true,	GET,good
+6099,	200	,2a00:1450:4006:808::200a,	https://fonts.googleapis.com/icon?family=Google+Material+Icons&display=block	,stylesheet,	1702391629529.606,	1419931202,	true,	GET,good
+6098,	200	,35.244.233.98,	https://www.kaggle.com/static/assets/app.js?v=ae6a1d7a4a9ef3b2a9d4	,script,	1702391629100.404,	1419931202	,true	,GET,good
+6097,	200	,35.244.233.98,	https://www.kaggle.com/static/assets/vendor.js?v=6495db0178f667c72ee8	,script,	1702391629108.653,	1419931202	,true,	GET,good
+6096,	200	,35.244.233.98,	https://www.kaggle.com/static/assets/runtime.js?v=ab6cc099b848f16615bc,	script,	1702391629072.54,	1419931202	,true,	GET,good
+6120,	200	,2a00:1450:4006:80e::2003,	https://fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7.woff2,	font	,1702391629980.189	,1419931202	,true,	GET,good
+6119,	200	,2a00:1450:4006:80e::2003,	https://fonts.gstatic.com/s/googlematerialicons/v139/Gw6kwdfw6UnXLJCcmafZyFRXb3BL9rvi0QZG3Q.woff2	,font,	1702391629980.314,	1419931202	,true	,GET,good
+6118,	200	,35.244.233.98,	https://www.kaggle.com/api/i/kernels.KernelsService/GetAcceleratorQuotaStatistics	,xmlhttprequest	,1702391630584.344	,1419931202,	false	,POST,good
+6117,	200	,35.244.233.98,	https://www.kaggle.com/static/assets/9932.57545777964f98b614dc.js	,script	,1702391630657.925,	1419931202,true	,GET,good
+6116,	200	,35.244.233.98,	https://www.kaggle.com/static/assets/7050.6dda534df2af76ced9a9.js	,script	,1702391630657.851,	1419931202,true	,GET,good
+6115,	200	,35.244.233.98,	https://www.kaggle.com/static/assets/9917.984295754dce90d0a790.js	,script	,1702391630656.193,	1419931202,true	,GET,good
+6114,	200	,35.244.233.98,	https://www.kaggle.com/static/assets/kernelViewerMaterialContainer.c086ce973e1a04a18de5.js	,script	,1702391630665.77,	1419931202,	true	,GET,good
+6113,	200	,35.244.233.98,	https://www.kaggle.com/static/assets/kernelViewerMaterialContainer.56ec1322d855ad0f5482.css	,stylesheet,	1702391629953.647,	1419931202,	true,	GET,good
+6112,	200	,35.244.233.98,	https://www.kaggle.com/static/assets/2918.f8609d9d0b6666c0f2b1.js	,script,1702391630654.897	,1419931202,true,	GET,good
+6111,	200	,35.244.233.98,	https://www.kaggle.com/static/assets/3483.ac068460fb217e9e0be1.js	,script,1702391630657.748	,1419931202,true,	GET,good
+6110,	200	,35.244.233.98,	https://www.kaggle.com/static/assets/2045.b905f2bc0a0c9bf4dad5.js	,script,1702391630645.984	,1419931202,true,	GET,good
+6109,	200	,35.244.233.98,	https://www.kaggle.com/static/assets/5166.0b1fea40a83df3b87a3b.js	,script,1702391630645.862	,1419931202,true,	GET,good
+6108,	200	,35.244.233.98,	https://www.kaggle.com/static/assets/3220.c88b568338ec6aa56e0c.js	,script,1702391630645.738	,1419931202,true,	GET,good
+6107,	200	,35.244.233.98,	https://www.kaggle.com/static/assets/9620.d0df9a9b90b8f8762560.js	,script,1702391630645.447	,1419931202,true,	GET,good
+6106,	200	,35.244.233.98,	https://www.kaggle.com/static/assets/3400.42713f1e0cc9641b411c.js	,script,1702391630648.839	,1419931202,true,	GET,good
+6105,	200	,35.244.233.98,	https://www.kaggle.com/api/i/users.AccountService/GenerateAnalyticsToken	,xmlhttprequest	,1702391630306.457,	1419931202	,false,	POST,good
+6104,	200	,35.244.233.98,	https://www.kaggle.com/api/i/users.UsersService/GetCurrentUser	,xmlhttprequest,	1702391630306.741,	1419931202,	false,	POST,good
+6103,	200	,2a00:1450:4006:800::200e,	https://apis.google.com/js/api.js	,script,	1702391630160.41,	1419931202	,true,	GET,good
+6102,	200	,2a02:26f0:b80:4::210:9552,	https://use.typekit.net/tql2nih.css	,stylesheet,	1702391630490.8	,1419931202	,false,	GET,good
+6101,	200	,2a02:26f0:b80:4::210:954d,	https://use.typekit.net/tql2nih.css	,stylesheet	,1702391629533.58,	1419931202	,true,	GET,good
+6100,	200	,2a00:1450:4006:808::200a,	https://fonts.googleapis.com/css?family=Inter:400,	stylesheet	,1702391629529.889,	1419931202	,true,	GET,good
+6099,	200	,2a00:1450:4006:808::200a,	https://fonts.googleapis.com/icon?family=Google+Material+Icons&display=block	,stylesheet,	1702391629529.606,	1419931202,	true,	GET,good
+6098,	200	,35.244.233.98,	https://www.kaggle.com/static/assets/app.js?v=ae6a1d7a4a9ef3b2a9d4	,script,	1702391629100.404,	1419931202	,true	,GET,good
+6097,	200	,35.244.233.98,	https://www.kaggle.com/static/assets/vendor.js?v=6495db0178f667c72ee8	,script,	1702391629108.653,	1419931202	,true,	GET,good
+6096,	200	,35.244.233.98,	https://www.kaggle.com/static/assets/runtime.js?v=ab6cc099b848f16615bc,	script,	1702391629072.54,	1419931202	,true,	GET,good
+6120,	200	,2a00:1450:4006:80e::2003,	https://fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7.woff2,	font	,1702391629980.189	,1419931202	,true,	GET,good
+6119,	200	,2a00:1450:4006:80e::2003,	https://fonts.gstatic.com/s/googlematerialicons/v139/Gw6kwdfw6UnXLJCcmafZyFRXb3BL9rvi0QZG3Q.woff2	,font,	1702391629980.314,	1419931202	,true	,GET,good
+6118,	200	,35.244.233.98,	https://www.kaggle.com/api/i/kernels.KernelsService/GetAcceleratorQuotaStatistics	,xmlhttprequest	,1702391630584.344	,1419931202,	false	,POST,good
+6117,	200	,35.244.233.98,	https://www.kaggle.com/static/assets/9932.57545777964f98b614dc.js	,script	,1702391630657.925,	1419931202,true	,GET,good
+6116,	200	,35.244.233.98,	https://www.kaggle.com/static/assets/7050.6dda534df2af76ced9a9.js	,script	,1702391630657.851,	1419931202,true	,GET,good
+6115,	200	,35.244.233.98,	https://www.kaggle.com/static/assets/9917.984295754dce90d0a790.js	,script	,1702391630656.193,	1419931202,true	,GET,good
+6114,	200	,35.244.233.98,	https://www.kaggle.com/static/assets/kernelViewerMaterialContainer.c086ce973e1a04a18de5.js	,script	,1702391630665.77,	1419931202,	true	,GET,good
+6113,	200	,35.244.233.98,	https://www.kaggle.com/static/assets/kernelViewerMaterialContainer.56ec1322d855ad0f5482.css	,stylesheet,	1702391629953.647,	1419931202,	true,	GET,good
+6112,	200	,35.244.233.98,	https://www.kaggle.com/static/assets/2918.f8609d9d0b6666c0f2b1.js	,script,1702391630654.897	,1419931202,true,	GET,good
+6111,	200	,35.244.233.98,	https://www.kaggle.com/static/assets/3483.ac068460fb217e9e0be1.js	,script,1702391630657.748	,1419931202,true,	GET,good
+6110,	200	,35.244.233.98,	https://www.kaggle.com/static/assets/2045.b905f2bc0a0c9bf4dad5.js	,script,1702391630645.984	,1419931202,true,	GET,good
+6109,	200	,35.244.233.98,	https://www.kaggle.com/static/assets/5166.0b1fea40a83df3b87a3b.js	,script,1702391630645.862	,1419931202,true,	GET,good
+6108,	200	,35.244.233.98,	https://www.kaggle.com/static/assets/3220.c88b568338ec6aa56e0c.js	,script,1702391630645.738	,1419931202,true,	GET,good
+6107,	200	,35.244.233.98,	https://www.kaggle.com/static/assets/9620.d0df9a9b90b8f8762560.js	,script,1702391630645.447	,1419931202,true,	GET,good
+6106,	200	,35.244.233.98,	https://www.kaggle.com/static/assets/3400.42713f1e0cc9641b411c.js	,script,1702391630648.839	,1419931202,true,	GET,good
+6105,	200	,35.244.233.98,	https://www.kaggle.com/api/i/users.AccountService/GenerateAnalyticsToken	,xmlhttprequest	,1702391630306.457,	1419931202	,false,	POST,good
+6104,	200	,35.244.233.98,	https://www.kaggle.com/api/i/users.UsersService/GetCurrentUser	,xmlhttprequest,	1702391630306.741,	1419931202,	false,	POST,good
+6103,	200	,2a00:1450:4006:800::200e,	https://apis.google.com/js/api.js	,script,	1702391630160.41,	1419931202	,true,	GET,good
+6102,	200	,2a02:26f0:b80:4::210:9552,	https://use.typekit.net/tql2nih.css	,stylesheet,	1702391630490.8	,1419931202	,false,	GET,good
+6101,	200	,2a02:26f0:b80:4::210:954d,	https://use.typekit.net/tql2nih.css	,stylesheet	,1702391629533.58,	1419931202	,true,	GET,good
+6100,	200	,2a00:1450:4006:808::200a,	https://fonts.googleapis.com/css?family=Inter:400,	stylesheet	,1702391629529.889,	1419931202	,true,	GET,good
+6099,	200	,2a00:1450:4006:808::200a,	https://fonts.googleapis.com/icon?family=Google+Material+Icons&display=block	,stylesheet,	1702391629529.606,	1419931202,	true,	GET,good
+6098,	200	,35.244.233.98,	https://www.kaggle.com/static/assets/app.js?v=ae6a1d7a4a9ef3b2a9d4	,script,	1702391629100.404,	1419931202	,true	,GET,good
+6097,	200	,35.244.233.98,	https://www.kaggle.com/static/assets/vendor.js?v=6495db0178f667c72ee8	,script,	1702391629108.653,	1419931202	,true,	GET,good
+6096,	200	,35.244.233.98,	https://www.kaggle.com/static/assets/runtime.js?v=ab6cc099b848f16615bc,	script,	1702391629072.54,	1419931202	,true,	GET,good

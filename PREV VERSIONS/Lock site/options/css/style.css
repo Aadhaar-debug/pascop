@@ -1,0 +1,157 @@
+button:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+body{
+    /*background: linear-gradient(to bottom, #74ABE2, #5563DE);*/
+    background-color: #FFF;
+}
+
+.title-info {
+    font-size: 18px;
+    color: #000;
+}
+
+.custom-nav {
+    background-color: #3f51b5!important;
+    border-color: #142689!important;
+    padding: 0;
+}
+
+.error {
+    border-color: red;
+}
+.error-text {
+    color: red;
+    font-size: 14px;
+}
+
+.active {
+    background-color: #142689!important;
+    color: #FFF;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgb(255 255 255) !important;
+    padding: 12px 8px;
+    margin: 0 5px;
+}
+
+.slide-container {
+    margin: auto;
+    width: 810px;
+    min-height: 600px;
+    padding: 5px;
+    background: #f0f2f6;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    align-items: flex-start;
+    box-shadow: 0px 3px 5px 4px rgb(34 60 80 / 20%);
+    border-radius: 2px;
+
+}
+
+.item {
+    flex-shrink: 0;
+    /*background: #fefefe;*/    
+    width: 800px;
+    margin: 5px;
+    
+}
+
+td.icon {
+    width: 30px;
+}
+
+.fa_icon {
+    width: 28px;
+    height: 26px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.td_btn i {
+    color: #FF0000;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.td_btn {
+    text-align: center;
+    width: 100px;
+}
+
+.delete-key{
+    color: #FF0000;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.keyword-list li{
+    padding: 3px;
+}
+.keyword-list li:hover{
+    background-color: aliceblue;
+}
+.disabled-block{
+    opacity:.3
+}
+.fixed-custom{
+    left: 20px;
+    bottom: 30px;
+    width: 200px;
+}
+
+.div-block{
+    width: 200px;
+    border-radius: 3px;
+    padding: 1px 8px;
+    margin-top: 5px;
+}
+
+
+table.extra-config{
+    background-color: #fff;
+}
+
+.info-block h3 {
+    font-size: 16px;
+    color: #0d6efd;
+}
+.info-block p {
+    color: #cecece;
+    color: #000;
+}
+i.fa-sort{
+    cursor: pointer;
+}
+b.not-valid {
+    color: #df0a0a;
+}
+b.exists {
+    color: #f69a12;
+}
+b.added {
+    color: #03a9f4;
+}
+h4.block_key{
+    color: #0d6efd;
+}
+table.block-keys a{
+    font-size: .875em;
+}
+.contact-us {
+    position: absolute;
+    right: 20px;
+    top: 9px;
+}
+.contact-us a, .contact-us a:hover {
+    color: #FFF;
+}
+@media (max-width: 992px) { 
+    .contact-us {
+        top: 5px;
+    }
+}

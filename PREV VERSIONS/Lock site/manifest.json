@@ -1,0 +1,30 @@
+{
+   "action": {
+      "default_icon": "64.png"
+   },
+   "background": {
+      "service_worker": "background.js"
+   },
+   "content_scripts": [ {
+      "js": [ "content_script.js" ],
+      "matches": [ "\u003Call_urls>" ],
+      "run_at": "document_start"
+   } ],
+   "description": "Easy way to block distracting websites to prevent access while you work",
+   "icons": {
+      "128": "128.png",
+      "16": "32.png",
+      "48": "64.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAm46HuPHhlWKnTFYr92vMNrlJ3h9tDCyZGIEN+/J19ckuBy3Zz5I+wxN+dSWLPo0bUWKISf89unj2cDx4VsX/3vWLlEdDEep8wsfIrm7z4qT5HfNNh03dyG7Y6awyKSoZssexsnI5k/J7JvYbBKxVg3Kh0lFO9w2hHGML/iwvGCHzf/KmWS50vA9a5PiDRRLpy8cUqKowJYLYLFHBH7EW5NO1Gvql5zIw0grvQtihuLiaXgJA4rLyYOWsCtZliVx1fvJOPTiJpqRBMC0cKGozzhletlgLlBTg06mCp1MoGpdfq1/7KQzMIuxs7ixtXQnMJIIXMIGbchoZtgdabxbwuwIDAQAB",
+   "manifest_version": 3,
+   "name": "Web Site blocker",
+   "options_page": "options/index.html",
+   "permissions": [ "tabs", "contextMenus", "storage", "declarativeNetRequest" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.6",
+   "web_accessible_resources": [ {
+      "matches": [ "\u003Call_urls>" ],
+      "resources": [ "128.png" ]
+   } ]
+}
